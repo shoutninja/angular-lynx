@@ -13,8 +13,8 @@ angular.module('ninja.shout.lynx', ['firebase'])
     }])
 
     //Load the repo
-    .factory("ninja.shout.lynx.api.forum", ["$firebase", "ninja.shout.lynx.urls", function ($firebase, urls) {
-        return $firebase(new Firebase(urls.forum)).$asArray();
+    .factory("ninja.shout.lynx.api.forum", ["$firebaseArray", "ninja.shout.lynx.urls", function ($firebaseArray, urls) {
+        return $firebaseArray(new Firebase(urls.forum));
     }])
 
 
